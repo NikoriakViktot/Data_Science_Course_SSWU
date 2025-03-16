@@ -24,6 +24,12 @@ import pandas as pd
 import math as mt
 import matplotlib.pyplot as plt
 
+import os
+os.environ['TCL_LIBRARY'] = r'C:\Python313\tcl\tcl8.6'
+os.environ['TK_LIBRARY'] = r'C:\Python313\tcl\tk8.6'
+
+
+
 
 # ------------------------ ФУНКЦІЯ парсингу реальних даних --------------------------
 
