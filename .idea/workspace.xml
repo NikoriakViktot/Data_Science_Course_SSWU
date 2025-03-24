@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_2 version 1.0">
-      <change beforePath="$PROJECT_DIR$/.idea/Data_Science_Course_SSWU.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Data_Science_Course_SSWU.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_1_5/MNK_Extrapol_sin_cos.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_1_5/MNK_Extrapol_sin_cos.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson_1_5/MNK_Extrapol_sin_cos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_1_5/MNK_Extrapol_sin_cos.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meteo_parser/telegram_filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/meteo_parser/telegram_filter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_2/default_data.csv" beforeDir="false" />
+    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_2 version 2.0">
       <change beforePath="$PROJECT_DIR$/task_2/home_work_2_Nikoriak.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_2/home_work_2_Nikoriak.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -247,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742748214241</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="task_2 version 2.0">
+      <option name="closed" value="true" />
+      <created>1742836287255</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742836287255</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -255,7 +256,8 @@
     <MESSAGE value="task_1_final" />
     <MESSAGE value="task_1 version 1.5" />
     <MESSAGE value="task_2 version 1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="task_2 version 1.0" />
+    <MESSAGE value="task_2 version 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="task_2 version 2.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,9 +1,7 @@
 # --------------------------- Homework_2  ------------------------------------
 """
 Виконав: Віктор Нікоряк
-Homework_2, варіант 1, І рівень складності:
-Закон зміни похибки – нормальний;
-Закон зміни досліджуваного процесу – квадратичний.
+Homework_2,
 Реальні дані – Дані температури повітря з метеостанцій.
 
 Package                      Version
@@ -24,15 +22,21 @@ import datetime
 from datetime import date, datetime
 import os
 import sys
-from scipy.optimize import curve_fit
 import pandas as pd
 
+from scipy.signal import detrend
+from scipy.signal import periodogram
+from scipy.optimize import curve_fit
 
-from scipy.signal import detrend, periodogram
-from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
+
+from sklearn.metrics import mean_squared_error, mean_absolute_error
 from sklearn.model_selection import cross_val_score
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression, Ridge
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import FunctionTransformer, StandardScaler
+
+
 
 from meteo_parser.telegram_filter import TelegramDataLoader
 
@@ -618,12 +622,7 @@ def forecast_exponential(values, horizon):
     t = np.arange(len(values) + horizon)
     return a * np.exp(b * t)
 
-from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import FunctionTransformer, StandardScaler
-from sklearn.linear_model import LinearRegression
 
-
-from scipy.signal import periodogram
 
 def estimate_period(y):
     # Частота дискретизації = 1 день
@@ -777,7 +776,7 @@ if __name__ == '__main__':
                                                                np.cos(omega * X.ravel())]), validate=False),
                 PolynomialFeatures(degree=5, include_bias=True),
                 StandardScaler(),
-                Ridge(alpha=2.0)
+                Ridge(alpha=1.0)
             )
             model.fit(train_t, train_y)
 
@@ -817,7 +816,7 @@ if __name__ == '__main__':
             plt.plot(t, y_pred, label=f"SinCos Polynomial (5th)")
             plt.xlabel("Часовий індекс")
             plt.ylabel("Температура")
-            plt.title("5‑й порядок Sin‑Cos поліноміальної регресії (detrened)")
+            plt.title("5‑й порядок Sin‑Cos поліноміальної регресії")
             plt.legend()
             plt.show()
             print("MSE:", mean_squared_error(data_series, y_pred.reshape(-1, 1)))
