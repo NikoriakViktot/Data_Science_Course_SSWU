@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_1 version 1.5">
+    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_2 version 1.0">
+      <change beforePath="$PROJECT_DIR$/.idea/Data_Science_Course_SSWU.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Data_Science_Course_SSWU.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson_1_5/MNK_Extrapol_sin_cos.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_1_5/MNK_Extrapol_sin_cos.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson_1_5/MNK_Extrapol_sin_cos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson_1_5/MNK_Extrapol_sin_cos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteo_parser/telegram_filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/meteo_parser/telegram_filter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_2/default_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/task_2/home_work_2_Nikoriak.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_2/home_work_2_Nikoriak.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,24 +40,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.task_1/docker-compose.yaml.app_fastapi: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.task_1/docker-compose.yaml.mongo: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.task_1/docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HW_1_Nikoriak.executor&quot;: &quot;Run&quot;,
-    &quot;Python.get_test_ogimet.executor&quot;: &quot;Run&quot;,
-    &quot;Python.home_work_1_NIKORIAK.executor&quot;: &quot;Run&quot;,
-    &quot;Python.home_work_2_Nikoriak.executor&quot;: &quot;Run&quot;,
-    &quot;Python.telegram_filter.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tinter_r.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/5302/PycharmProjects/Data_Science_Course_SSWU/task_2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.task_1/docker-compose.yaml.app_fastapi: Compose Deployment.executor": "Run",
+    "Docker.task_1/docker-compose.yaml.mongo: Compose Deployment.executor": "Run",
+    "Docker.task_1/docker-compose.yaml: Compose Deployment.executor": "Run",
+    "Python.HW_1_Nikoriak.executor": "Run",
+    "Python.L_1_5_non-linear_regression.executor": "Run",
+    "Python.Non-Linear_extrapolation.executor": "Run",
+    "Python.get_test_ogimet.executor": "Run",
+    "Python.home_work_1_NIKORIAK.executor": "Run",
+    "Python.home_work_2_Nikoriak.executor": "Run",
+    "Python.telegram_filter.executor": "Run",
+    "Python.tinter_r.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/5302/PycharmProjects/Data_Science_Course_SSWU/task_2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_2" />
@@ -64,7 +73,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.home_work_2_Nikoriak">
-    <configuration name="HW_1_Pysarchuk" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="L_1_5_non-linear_regression" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Data_Science_Course_SSWU" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -73,11 +82,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_1/Lesson_1_2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson_1_5" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_1\Lesson_1_2\HW_1_Pysarchuk.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson_1_5/L_1_5_non-linear_regression.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -86,7 +95,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="get_test_ogimet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Non-Linear_extrapolation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Data_Science_Course_SSWU" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -95,11 +104,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson_1_5" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_1/get_test_ogimet.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson_1_5/Non-Linear_extrapolation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -183,10 +192,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.home_work_2_Nikoriak" />
+        <item itemvalue="Python.L_1_5_non-linear_regression" />
+        <item itemvalue="Python.Non-Linear_extrapolation" />
         <item itemvalue="Python.telegram_filter" />
         <item itemvalue="Python.home_work_1_NIKORIAK" />
-        <item itemvalue="Python.HW_1_Pysarchuk" />
-        <item itemvalue="Python.get_test_ogimet" />
       </list>
     </recent_temporary>
   </component>
@@ -230,14 +239,23 @@
       <option name="project" value="LOCAL" />
       <updated>1742153275140</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="task_2 version 1.0">
+      <option name="closed" value="true" />
+      <created>1742748214241</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742748214241</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="task_1" />
     <MESSAGE value="task_1_final" />
     <MESSAGE value="task_1 version 1.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="task_1 version 1.5" />
+    <MESSAGE value="task_2 version 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="task_2 version 1.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

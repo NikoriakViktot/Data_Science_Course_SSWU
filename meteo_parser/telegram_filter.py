@@ -51,9 +51,8 @@ class TelegramDataLoader:
       - **kwargs: усі додаткові параметри фільтрації (наприклад, country_code, station_id, date, hour тощо)
     """
 
-    def __init__(self, *, csv_file="default_data.csv", api_url=None,
+    def __init__(self, *, api_url=None,
                  aggregate_field=None, fields_to_return=None, **kwargs):
-        self.csv_file = csv_file
         self.api_url = api_url
         self.aggregate_field = aggregate_field
         self.fields_to_return = fields_to_return
@@ -80,48 +79,22 @@ class TelegramDataLoader:
             return []
         return results
 
-    def save_to_csv(self, results):
-        """
-        Зберігає результати API у CSV та повертає DataFrame.
-        """
-        data_list = [record.get("data", {}) for record in results]
-        df = pd.DataFrame(data_list)
-        try:
-            df.to_csv(self.csv_file, index=False)
-            print(f"Дані збережено у файл: {self.csv_file}")
-        except Exception as e:
-            print("Помилка при збереженні CSV:", e)
-        return df
 
-    def load_from_csv(self):
-        """
-        Завантажує дані з CSV файлу та повертає DataFrame.
-        """
-        try:
-            df = pd.read_csv(self.csv_file)
-        except Exception as e:
-            print("Помилка при завантаженні CSV:", e)
-            return None
-        return df
-
-    def get_raw_data(self, force_api=False):
+    def get_raw_data(self):
         """
         Повертає сирі дані як DataFrame.
         Якщо force_api=True або CSV-файл відсутній, дані завантажуються через API.
         """
-        if not force_api and os.path.exists(self.csv_file):
-            df = self.load_from_csv()
-            if df is not None:
-                print(f"Завантажено дані з CSV: {self.csv_file}")
-                return df
         results = self.fetch_data_api()
         if not results:
             print("За заданими параметрами даних не знайдено.")
             return None
-        df = self.save_to_csv(results)
+        data_list = [record.get("data", {}) for record in results]
+        df = pd.DataFrame(data_list)
         return df
 
-    def get_daily_data(self, force_api=False):
+
+    def get_daily_data(self):
         """
         Агрегує сирі дані до середньодобових значень.
 
@@ -130,7 +103,7 @@ class TelegramDataLoader:
           values (np.ndarray): масив агрегованих значень для aggregate_field.
           df_daily (DataFrame): агрегований DataFrame.
         """
-        df = self.get_raw_data(force_api=force_api)
+        df = self.get_raw_data()
         if df is None:
             return None, None, None
 
@@ -140,17 +113,10 @@ class TelegramDataLoader:
             else:
                 df = df.copy()
                 df["datetime"] = pd.to_datetime(df.index, errors="coerce")
-        # Видаляємо записи з невизначеним datetime або значенням для aggregate_field
-        if self.aggregate_field:
-            df = df.dropna(subset=["datetime", self.aggregate_field])
-        else:
-            df = df.dropna(subset=["datetime"])
         df.sort_values(by="datetime", inplace=True)
 
-        # Агрегування за добою – обчислюємо середнє для числових колонок
         df.set_index("datetime", inplace=True)
         df_daily = df.resample("D").mean(numeric_only=True).reset_index()
-
         # Перетворюємо datetime на об’єкти типу date
         df_daily["datetime"] = df_daily["datetime"].dt.date
 
@@ -158,7 +124,6 @@ class TelegramDataLoader:
         if self.aggregate_field and self.aggregate_field in df_daily.columns:
             values = df_daily[self.aggregate_field].to_numpy()
         else:
-            # Якщо не вказано, вибираємо перший числовий стовпець (якщо є)
             num_cols_in_df = df_daily.select_dtypes(include=[np.number]).columns
             if len(num_cols_in_df) > 0:
                 values = df_daily[num_cols_in_df[0]].to_numpy()
@@ -166,9 +131,6 @@ class TelegramDataLoader:
                 values = df_daily.iloc[:, 0].to_numpy()
 
         time_index = df_daily["datetime"].to_numpy()
-
-        print("Форма агрегованого DataFrame:", df_daily.shape)
-        print("Кількість середньодобових записів:", len(values))
         return time_index, values, df_daily
 
     def plot_data(self, time_index, data, title="Дані"):
@@ -195,12 +157,13 @@ if __name__ == '__main__':
     )
 
     # Завантаження сирих даних
-    raw_df = loader.get_raw_data(force_api=True)
+    raw_df = loader.get_raw_data()
     if raw_df is not None:
         print("Сирі дані:")
         print(raw_df.head())
 
     # Отримання агрегованих (середньодобових) даних
-    time_idx, values, df_daily = loader.get_daily_data(force_api=True)
+    time_idx,values, df_daily = loader.get_daily_data()
     if values is not None:
         loader.plot_data(time_idx, values, title="Середньодобові дані")
+

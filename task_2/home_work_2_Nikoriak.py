@@ -20,11 +20,19 @@ requests                     2.32.3
 import math as mt
 import numpy as np
 import matplotlib.pyplot as plt
-import pandas as pd
-import requests
-from datetime import datetime
+import datetime
+from datetime import date, datetime
 import os
 import sys
+from scipy.optimize import curve_fit
+import pandas as pd
+
+
+from scipy.signal import detrend, periodogram
+from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
+from sklearn.model_selection import cross_val_score
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression, Ridge
 
 from meteo_parser.telegram_filter import TelegramDataLoader
 
@@ -105,7 +113,7 @@ def randomAM(n, iter, nAV):
     scvS = mt.sqrt(dS)
     for i in range(nAV):
         SAV[i] = mt.ceil(np.random.randint(1, iter))
-    print('номери АВ: SAV=', SAV)
+    # print('номери АВ: SAV=', SAV)
     print('----- РІВНОМІРНИЙ розподіл індексів АВ -----')
     print(f'мат. сподівання= {mS}, дисперсія= {dS}, СКВ= {scvS}')
     print('-------------------------------------------')
@@ -454,6 +462,198 @@ def Plot_AV(S0_L, SV_L, Text):
     return
 
 
+def compare_library_model(data_series, time_series, degree=2, model_type="SGDRegressor"):
+    """
+    Функція для побудови тренду за допомогою бібліотечної моделі (sklearn) з поліноміальними ознаками
+    та порівняння результату з  методом МНК.
+
+    Параметри:
+      data_series: вектор вихідних даних (наприклад, температури).
+      time_series: часовий індекс або послідовність вимірювань (якщо це дати, вони будуть перетворені у числа).
+      degree: степінь поліноміальної апроксимації (за замовчуванням 2).
+      model_type: рядок з назвою моделі (наприклад, "LinearRegression", "Ridge", "Lasso", "ElasticNet", "SGDRegressor").
+
+    Повертає:
+      y_pred_library: прогнозовані значення, отримані бібліотечною моделлю.
+      y_pred_mnk: прогнозовані значення за вашим методом МНК.
+
+    Побудова графіка дає можливість візуально порівняти вихідні дані, бібліотечну модель та МНК.
+    """
+    # Перетворюємо часовий індекс у числовий формат
+    if isinstance(time_series[0], (date, datetime)):
+        t = np.array([x.toordinal() for x in time_series]).reshape(-1, 1)
+    else:
+        t = np.array(time_series).reshape(-1, 1)
+
+    y = np.array(data_series)
+
+    # Якщо обрана модель SGDRegressor, використовуємо конвеєр із PolynomialFeatures та StandardScaler
+    if model_type == "SGDRegressor":
+        from sklearn.pipeline import make_pipeline
+        from sklearn.preprocessing import StandardScaler, PolynomialFeatures
+        from sklearn.linear_model import SGDRegressor
+
+        model = make_pipeline(
+            PolynomialFeatures(degree=degree, include_bias=True),
+            StandardScaler(),
+            SGDRegressor(loss="squared_error", max_iter=2000, tol=1e-4)
+        )
+        model.fit(t, y.ravel())
+        y_pred_library = model.predict(t)
+    else:
+        from sklearn.preprocessing import PolynomialFeatures
+        if model_type == "LinearRegression":
+            from sklearn.linear_model import LinearRegression
+            model = LinearRegression()
+        elif model_type == "Ridge":
+            from sklearn.linear_model import Ridge
+            model = Ridge()
+        elif model_type == "Lasso":
+            from sklearn.linear_model import Lasso
+            model = Lasso()
+        elif model_type == "ElasticNet":
+            from sklearn.linear_model import ElasticNet
+            model = ElasticNet()
+        else:
+            print("Невідома модель. Використовується LinearRegression за замовчуванням.")
+            from sklearn.linear_model import LinearRegression
+            model = LinearRegression()
+
+        poly = PolynomialFeatures(degree=degree, include_bias=True)
+        t_poly = poly.fit_transform(t)
+        model.fit(t_poly, y)
+        y_pred_library = model.predict(t_poly)
+
+    y_pred_mnk = MNK(data_series)
+
+    # Побудова графіку для порівняння результатів
+    plt.figure(figsize=(10, 5))
+    plt.plot(t, y, label="Вихідні дані", alpha=0.5)
+    plt.plot(t, y_pred_library, label=f"Бібліотечна модель: {model_type}", linewidth=2)
+    plt.plot(t, y_pred_mnk, label="Модель МНК (custom)", linestyle='--', linewidth=2)
+    plt.xlabel("Часовий індекс")
+    plt.ylabel("Температура")
+    plt.title("Порівняння бібліотечної моделі та МНК (custom)")
+    plt.legend()
+    plt.show()
+
+    return y_pred_library, y_pred_mnk
+
+def MNK_Extrapol_sin_cos (S0, koef):
+    iter = len(S0)
+    Yout_Extrapol = np.zeros((iter + koef, 1))
+    YReal = np.zeros(((iter + koef), 1))
+    YMNK = np.zeros(((iter + koef), 1))
+    Yout = np.zeros((iter, 1))
+    Yin = np.zeros((iter, 1))
+    F = np.ones((iter, 4))
+    for i in range(iter):  # формування структури вхідних матриць МНК
+        Yin[i, 0] = float(S0[i])  # формування матриці вхідних даних
+        F[i, 1] = float(i)
+        F[i, 2] = float(i * i)
+        F[i, 3] = float(i * i * i)
+    FT = F.T
+    FFT = FT.dot(F)
+    FFTI = np.linalg.inv(FFT)
+    FFTIFT = FFTI.dot(FT)
+    C = FFTIFT.dot(Yin)
+    a0 = C[0, 0]
+    b0 = C[1, 0] / (mt.sqrt(abs(C[2, 0] / C[0, 0])))
+    w0 = mt.sqrt(abs(C[2, 0] / C[0, 0]))
+    for i in range(iter):
+        Yout[i, 0] = (a0 * mt.cos(w0 * i) + b0 * mt.sin(w0 * i))
+    print('Ідеальна модель тренда: y(t) = ', 7.8 , ' *  cos (', 0.05, ' * t)', ' + ', 9.5, ' * sin(', w0, ' * t )')
+    print('Регресійна модель_МНК: y(t) = ', C[0, 0], ' + ', C[1, 0], ' * t', ' + ', C[2, 0], ' * t^2', '+ ', C[3, 0], ' * t^3')
+    print('Регресійна сінусно-косинусна модель: y(t) = ', a0, ' *  cos (', w0, ' * t)', ' + ', b0, ' * sin(', w0, ' * t )')
+    for i in range(iter+koef):
+        Yout_Extrapol[i, 0] = (a0 * mt.cos(w0 * i) + b0 * mt.sin(w0 * i))   # проліноміальна крива МНК - прогнозування
+        YReal[i, 0] = (7.8 * mt.cos(0.05 * i) + 9.5 * mt.sin(0.05 * i))  # ідеальна крива - вхідна
+        YMNK[i, 0] = C[0, 0] + C[1, 0] * i + (C[2, 0] * i * i)  # проліноміальна крива МНК
+    plt.plot(Yin,  label="time series")
+    plt.plot(YReal, 'r--', label="perfect trend")
+    plt.plot(Yout_Extrapol, label="LSM sin-cos R&D model")
+    plt.legend()
+    plt.ylabel('Динаміка нелінійного процесу: екстраполяція')
+    plt.savefig('MNK_Extrapol_sin_cos.png')
+    plt.savefig('MNK_Extrapol_sin_cos.jpg')
+    plt.show()
+
+    return Yout_Extrapol
+
+# ------------------------------ МНК sin_cos -------------------------------------
+def MNK_sin_cos (S0):
+    iter = len(S0)
+    Yout = np.zeros((iter, 1))
+    Yin = np.zeros((iter, 1))
+    F = np.ones((iter, 4))
+    for i in range(iter):  # формування структури вхідних матриць МНК
+        Yin[i, 0] = float(S0[i])  # формування матриці вхідних даних
+        F[i, 1] = float(i)
+        F[i, 2] = float(i * i)
+        F[i, 3] = float(i * i * i)
+    FT=F.T
+    FFT = FT.dot(F)
+    FFTI=np.linalg.inv(FFT)
+    FFTIFT=FFTI.dot(FT)
+    C=FFTIFT.dot(Yin)
+    a0 = C[0, 0]
+    b0 = C[1, 0] / (mt.sqrt(abs(C[2, 0] / C[0, 0])))
+    w0 = mt.sqrt(abs(C[2, 0] / C[0, 0]))
+    for i in range(iter):
+        Yout[i, 0]=(a0 * mt.cos(w0 * i) + b0 * mt.sin(w0 * i))
+    print('Регресійна сінусно-косинусна модель:')
+    print('y(t) = ', a0, ' *  cos (', w0, ' * t)', ' + ', b0, ' * sin(', w0, ' * t )')
+
+    return Yout
+
+def fit_exponential(values):
+    """Оцінка параметрів експоненційної моделі y = a * exp(b*t) через scipy.curve_fit"""
+    def exp_model(t, a, b): return a * np.exp(b * t)
+    popt, _ = curve_fit(exp_model, np.arange(len(values)), values, p0=(values[0], 0.01))
+    return popt
+
+def forecast_exponential(values, horizon):
+    """Побудова прогнозу експоненційної моделі на horizon точок"""
+    a, b = fit_exponential(values)
+    t = np.arange(len(values) + horizon)
+    return a * np.exp(b * t)
+
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import FunctionTransformer, StandardScaler
+from sklearn.linear_model import LinearRegression
+
+
+from scipy.signal import periodogram
+
+def estimate_period(y):
+    # Частота дискретизації = 1 день
+    freqs, power = periodogram(y, fs=1)
+    # Виключаємо нульову частоту і беремо максимум
+    idx = np.argmax(power[1:]) + 1
+    return 1 / freqs[idx]
+def rolling_period(y, window=None):
+    periods = []
+    for start in range(len(y) - window):
+        segment = y[start:start+window]
+        periods.append(estimate_period(segment))
+    return np.array(periods)
+def r2_score_1d(SL, Y_pred, Text):
+    """
+    Тут SL i Y_pred — обидва 1D numpy arrays однакової довжини.
+    """
+    n = len(Y_pred)
+    numerator = 0
+    denominator_2 = 0
+    mean_SL = np.mean(SL)
+    for i in range(n):
+        numerator += (SL[i] - Y_pred[i])**2
+        denominator_2 += (SL[i] - mean_SL)**2
+    R2_score_our = 1 - (numerator / denominator_2)
+    print(f"------------ {Text} -------------")
+    print(f"Кількість елементів вибірки= {n}")
+    print(f"R² = {R2_score_our}")
+    return R2_score_our
+
 
 # ------------------------ ГОЛОВНИЙ БЛОК --------------------------------------
 # Глобальні змінні для синтетичної моделі
@@ -476,8 +676,7 @@ if __name__ == '__main__':
 
     print('Оберіть джерело вхідних даних та подальші дії:')
     print('1 - Модель (синтетичні дані)')
-    print('2 - Реальні дані (парсинг через API або CSV)')
-    print('3 - Бібліотеки для статистичного навчання -->>> STOP')
+    print('2 - Реальні дані (парсинг через API)')
     Data_mode = int(input('mode: '))
 
     if Data_mode == 1:
@@ -503,74 +702,199 @@ if __name__ == '__main__':
         data_series = SV_AV
         time_series = np.arange(len(data_series))
     elif Data_mode == 2:
-        print("Оберіть спосіб завантаження реальних даних:")
-        print("1 - Завантаження через API")
-        print("2 - Завантаження з CSV файлу")
-        method = int(input("Введіть 1 або 2: "))
+        print("Оберіть номер станції:")
+        for num, (city, code) in stations.items():
+            print(f"{num} - {city} (код {code})")
+        station_choice = int(input("Введіть номер: "))
+        if station_choice not in stations:
+            print("Невірний вибір станції!")
+            sys.exit(1)
+        else:
+            station_name, station_id = stations[station_choice]
+            print(f"Обрано станцію: {station_name} (код {station_id})")
+            loader_data = TelegramDataLoader(
+                api_url="http://127.0.0.1:8000/filter_telegrams/",
+                country_code="ua",
+                station_id=station_id,
+                fields_to_return=["year", "month", "day", "hour", "temperature"],
+                aggregate_field="temperature")
+            df = loader_data.get_raw_data()
+            df['dt'] = pd.to_datetime(df[['year', 'month', 'day', 'hour']])
+            df = df.sort_values('dt').reset_index(drop=True)
+            df['time_idx'] = range(len(df))
+            time_series = df['time_idx'].values.reshape(-1, 1)
+            data_series = df['temperature'].values
+            if data_series is not None:
+                loader_data.plot_data(time_series, data_series, title=f" дані")
+            n = len(time_series)
+
+        print("Оберіть спосіб моделювання  реальних даних:")
+        print("1 - МНК реалізація")
+        print('2 - Бібліотеки для статистичного навчання')
+        print('3 - Нелінійна екстрополяція')
+        print('4 - Нелінійна sin - cos')
+
+
+
+        method = int(input("Введіть цифру: "))
 
         if method == 1:
-            print("Оберіть номер станції:")
-            for num, (city, code) in stations.items():
-                print(f"{num} - {city} (код {code})")
-            station_choice = int(input("Введіть номер: "))
-            if station_choice not in stations:
-                print("Невірний вибір станції!")
-                sys.exit(1)
-            else:
-                station_name, station_id = stations[station_choice]
-                print(f"Обрано станцію: {station_name} (код {station_id})")
-                loader_data = TelegramDataLoader(
-                    api_url="http://127.0.0.1:8000/filter_telegrams/",
-                    country_code="ua",
-                    station_id=station_id,
-                    fields_to_return=["year", "month", "day", "hour", "temperature"],
-                    aggregate_field="temperature")
-                time_idx, values, df = loader_data.get_daily_data(force_api=True)
-                print(df)
-
-                if values is not None:
-                    loader_data.plot_data(time_idx, values, title=f"Середньодобові дані")
-
                 plt.figure()
-                plt.plot(time_idx, values, label="Температура (середньодобова)")
-                Yout = MNK_Stat_characteristics(values)
-                plt.plot(time_idx, Yout, 'r', label="Тренд (МНК)")
+                plt.plot(time_series, data_series, label="Температура (середньодобова)")
+                Yout = MNK_Stat_characteristics(data_series)
+                plt.plot(time_series, Yout, 'r', label="Тренд (МНК)")
                 plt.xlabel("Часовий індекс (дні)")
                 plt.ylabel("Температура")
                 plt.title(f"Температура та тренд: {station_name}")
                 plt.legend()
                 plt.show()
-                Stat_characteristics(values, f"Температура (залишки) - {station_name}")
-                data_series = values
-                time_series = time_idx
-        elif method == 2:
-            file_name = input("Введіть шлях до CSV файлу (або залиште порожнім для дефолтного): ").strip()
-            if file_name == "":
-                file_name = "default_data.csv"
-            csv_loader = TelegramDataLoader(csv_file=file_name)
-            time_series, temperatures, df = csv_loader.get_daily_data()
-            print("Кількість температурних значень:", len(temperatures))
+                Stat_characteristics(data_series, f"Температура (залишки) - {station_name}")
+
+        if method == 2:
+            time_series = np.arange(len(time_series))
+            # y_lib, y_mnk = compare_library_model(values, time_series, degree=2, model_type="Ridge")
+            # y_lib, y_mnk = compare_library_model(values, time_series, degree=2, model_type="LinearRegression")
+            y_lib, y_mnk = compare_library_model(data_series, time_series, degree=5, model_type="SGDRegressor")
+            sys.exit(1)
+        if method == 3:
+            # Перевірка даних і чистка (sliding window)
+            time_series = np.arange(len(data_series))
+            n = len(data_series)
+            y = data_series.copy()
+            t = np.arange(len(y)).reshape(-1, 1)
+
+            train_y = y[:500]
+            train_t = t[:500]
+            test_y = y[500:]
+            test_t = t[500:]
+
+            omega = 2 * np.pi / n
+            y_detr = detrend(y)
+            t_future = np.arange(n, n + 7).reshape(-1, 1)
+
+            model = make_pipeline(
+                FunctionTransformer(lambda X: np.column_stack([np.sin(omega * X.ravel()),
+                                                               np.cos(omega * X.ravel())]), validate=False),
+                PolynomialFeatures(degree=5, include_bias=True),
+                StandardScaler(),
+                Ridge(alpha=2.0)
+            )
+            model.fit(train_t, train_y)
+
+            y_pred = model.predict(test_t)
+
+            print("Test R²:", r2_score(test_y.reshape(-1, 1), y_pred.reshape(-1, 1), "MNK_модель_SinCos Polynomial"))
+            print("Test MSE:", mean_squared_error(test_y, y_pred))
+            print("Test MAE:", mean_absolute_error(test_y, y_pred))
+
             plt.figure()
-            plt.plot(time_series, temperatures, label="Температура (з CSV)")
-            Yout = MNK_Stat_characteristics(temperatures)
-            plt.plot(time_series, Yout, 'r', label="Тренд (МНК)")
-            plt.xlabel("Часовий індекс (дні)")
-            plt.ylabel("Температура")
-            plt.title("Температура та тренд (з CSV)")
+            plt.plot(train_t, train_y, label="Train ")
+            plt.plot(test_t, test_y, label="Actual days)")
+            plt.plot(test_t, y_pred, '--', label="Forecast")
+            plt.xlabel("Day index")
+            plt.ylabel("Temperature")
+            plt.title("Train vs Forecast on last 7 days")
             plt.legend()
             plt.show()
-            Stat_characteristics(temperatures, "Температура (залишки) з CSV файлу")
-            data_series = temperatures
-            time_series = time_series
-        else:
-            print("Невірний вибір способу завантаження даних!")
-            sys.exit(1)
-    elif Data_mode == 3:
-        print('Бібліотеки Python для реалізації методів статистичного навчання:')
-        print('https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html')
-        print('https://www.statsmodels.org/stable/examples/notebooks/generated/ols.html')
-        print('https://scikit-learn.org/stable/modules/sgd.html#regression')
-        sys.exit(0)
+
+            t = np.arange(len(y)).reshape(-1, 1)
+            model = make_pipeline(
+                FunctionTransformer(lambda X: np.column_stack([np.sin(omega * X.ravel()),
+                                                               np.cos(omega * X.ravel())]), validate=False),
+                PolynomialFeatures(degree=5, include_bias=True),
+                StandardScaler(),
+                Ridge(alpha=1.0)
+            )
+
+            model.fit(t, y)
+            y_pred = model.predict(t)
+            r2 = r2_score(data_series, y_pred.reshape(-1, 1), "MNK_модель_SinCos Polynomial")
+            print("R2 score для SinCos Polynomial моделі:", r2)
+
+            # 5) Побудова графіку
+            plt.figure()
+            plt.plot(t, y, label="Очищені дані (detrended)")
+            plt.plot(t, y_pred, label=f"SinCos Polynomial (5th)")
+            plt.xlabel("Часовий індекс")
+            plt.ylabel("Температура")
+            plt.title("5‑й порядок Sin‑Cos поліноміальної регресії (detrened)")
+            plt.legend()
+            plt.show()
+            print("MSE:", mean_squared_error(data_series, y_pred.reshape(-1, 1)))
+            print("MAE:", mean_absolute_error(data_series, y_pred.reshape(-1, 1)))
+
+            # 3) Cross‑validation (5 folds)
+            scores = cross_val_score(model, t, data_series, cv=5, scoring="r2")
+            print("CV R² scores:", scores)
+            print("Mean CV R²:", scores.mean())
+            y_future = model.predict(t_future)
+
+
+            cleaned = Sliding_Window_AV_Detect_sliding_wind(data_series.copy(), n_Wind=600)
+            Stat_characteristics_in(cleaned, 'Очистка (sliding window)')
+
+            # Експоненційна модель + прогноз
+            a, b = fit_exponential(cleaned)
+            print(f"Параметри експоненційної моделі: a={a:.4f}, b={b:.4f}")
+            y_exp = forecast_exponential(cleaned, horizon=int(0.5 * len(cleaned)))
+
+            # Sin‑Cos MNK тренд + прогноз
+            trend_sin = MNK_sin_cos(cleaned)
+            y_sin = MNK_Extrapol_sin_cos(cleaned, koef=int(0.5 * len(cleaned)))
+
+            # Побудова графіку
+            plt.figure()
+            plt.plot(time_series, cleaned, label="Очищені дані")
+            plt.plot(np.arange(len(y_exp)), y_exp, label="Прогноз експоненційної")
+            plt.plot(np.arange(len(trend_sin)), trend_sin, '--', label="Sin‑Cos тренд")
+            plt.plot(np.arange(len(y_sin)), y_sin, label="Sin‑Cos прогноз")
+            plt.xlabel("Індекс часу")
+            plt.ylabel("Значення")
+            plt.title("Нелінійна екстраполяція")
+            plt.legend()
+            plt.show()
+            sys.exit(0)
+        if method == 4:
+            n = len(data_series)
+            train_size = int(0.8 * n)
+            X_train = time_series[:train_size].reshape(-1, 1)
+            y_train = data_series[:train_size]
+            X_test = time_series[train_size:].reshape(-1, 1)
+            y_test = data_series[train_size:]
+            omega = 2 * np.pi / n
+
+            model = make_pipeline(
+                FunctionTransformer(lambda X: np.column_stack([np.sin(omega * X.ravel()),
+                                                               np.cos(omega * X.ravel())]), validate=False),
+                PolynomialFeatures(degree=5, include_bias=True),
+                StandardScaler(),
+                LinearRegression()
+            )
+
+            # 3) Навчаємося лише на train
+            model.fit(X_train, y_train)
+
+            # 4) Прогнозуємо на test
+            y_pred_test = model.predict(X_test)
+
+            # 5) Оцінюємо похибку (тільки на test, бо це out‑of‑sample)
+            mse = mean_squared_error(y_test, y_pred_test)
+            r2 = r2_score_1d(y_test, y_pred_test, "MNK_модель_SinCos Polynomial")
+            print("Test MSE:", mse)
+            print("Test R²:", r2)
+
+            # 6) Візуалізація
+            plt.figure(figsize=(10, 5))
+            plt.plot(X_train, y_train, label="Train", color='blue')
+            plt.plot(X_test, y_test, label="Actual (test)", color='orange')
+            plt.plot(X_test, y_pred_test, '--', label="Forecast", color='green')
+            plt.xlabel("Time index")
+            plt.ylabel("Temperature")
+            plt.title("Train vs Forecast (out‑of‑sample)")
+            plt.legend()
+            plt.show()
+            sys.exit(0)
+
     else:
         print("Невірний вибір джерела даних!")
         sys.exit(1)
@@ -619,7 +943,7 @@ if __name__ == '__main__':
     elif mode == 5:
         # MNK прогнозування
         N_Wind = 5
-        koef_Extrapol = 0.2  # прогноз на 20% від розміру вибірки
+        koef_Extrapol = 0.5
         n = len(data_series)
         koef = int(mt.ceil(n * koef_Extrapol))  # кількість точок прогнозування
         S_detect = Sliding_Window_AV_Detect_sliding_wind(data_series.copy(), N_Wind)
@@ -641,46 +965,31 @@ if __name__ == '__main__':
 
 
     # --------------------- ВИСНОВКИ ----------------------
-    """
-    ВИСНОВКИ:
+'''Висновоки:
 
-    1. Синтетична модель:
-       - Було згенеровано 10 000 випадкових значень за нормальним розподілом 
-         (середнє ≈0, СКВ ≈5).
-       - Побудовано квадратичний тренд, до якого додано нормальний шум.
-       - Статистичні характеристики залишків (розраховані методом МНК) показали, що 
-         математичне сподівання залишків практично дорівнює нулю, дисперсія становить 
-         приблизно 24.90, а СКВ – близько 4.99.
-       - Додавання аномалій суттєво збільшує розкид залишків (дисперсія ≈45.30, СКВ ≈6.73),
-         що свідчить про вплив викидів на загальний розкид даних.
+1. Якість моделі та роль очищення даних.  
+   Очищення від аномальних вимірів (методи medium, MNK, sliding window) відчутно впливає на статистику залишків і загальний \(R^2\). 
+   Вибір конкретного методу залежить від природи вхідних даних та рівня шуму: чим «брудніші» дані, тим більше користі від попередньої обробки.
 
-    2. Реальні дані:
-       - Дані температури, отримані через API або завантажені з CSV, аналізуються методом МНК.
+2. Поліноміальні та sin‑cos моделі.  
+   - Квадратичні (2-го порядку) і поліноми вищого порядку (наприклад, 5‑го) дають різні результати, 
+     причому високий порядок може «перевчитися» (overfitting), якщо вибірка мала.  
+   - Нелінійні sin‑cos моделі краще вловлюють сезонність, що підтверджує вищий (R2) (до 0.65–0.71),
+     але тільки за умови достатнього охоплення даних і коректного визначення періоду.
 
-       Статистичні характеристики залишків (метод МНК) на прикладі:
-       - Станції Київ:
-         • матиматичне сподівання ВВ= 4.27×10⁻¹⁵,
-         • дисперсія ВВ = 24.68,
-         • СКВ ВВ= 4.97.
-       - Станції Харків:
-         • матиматичне сподівання ВВ= -5.12×10⁻¹⁵,
-         • дисперсія ВВ = 29.15,
-         • СКВ ВВ= 5.40.
-       - Станції Львів:
-         • матиматичне сподівання ВВ= 9.21×10⁻¹⁵,
-         • дисперсія ВВ = 27.91,
-         • СКВ ВВ= 5.28.
+3. Обмеження за обсягом даних.  
+   - На невеликих вибірках (зокрема коли є лише декілька місяців спостережень) модель «підганяється» під короткострокові коливання.
+     Це призводить до низького чи навіть від’ємного R2.  
+   - Для довгострокового прогнозу та визначення кліматичної норми бажано мати мінімум 30 років історичних даних, 
+     щоб врахувати всі сезонні та багаторічні тренди.
 
-    3. Загальний висновок:
-       Отримані результати демонструють, що реалізовані моделі є адекватними:
-       - Синтетична модель правильно відтворює задані параметри (нормальний шум і квадратичний тренд),
-         а додавання аномалій логічно збільшує розкид даних.
-       - Аналіз реальних даних показує, що побудована модель тренду методом МНК
-         добре апроксимує середню тенденцію температурного ряду, хоча певна частина варіації залишається випадковою.
+4. Перевірка моделей (out‑of‑sample, крос‑валідація).  
+   - При розбитті на train/test і перевірці «на майбутніх точках» (які модель «не бачила») часто спостерігається падіння R2. 
+     Це свідчить про необхідність більш адаптивних методів або більшої вибірки.  
+   - Крос‑валідація також показує, що модельна похибка і значення R2 можуть істотно змінюватися залежно від конкретних фрагментів даних.
 
-    Таким чином, скрипт успішно задовольняє вимоги завдання:
-       - Моделювання випадкової величини та побудова квадратичного тренду.
-       - Формування адитивної моделі (тренд + шум + аномалії).
-       - Обчислення статистичних характеристик і побудова гістограм.
-       - Аналіз реальних даних із можливістю завантаження через API або CSV.
-    """
+5. Практичний підсумок.  
+   - Найкращі результати отримують тоді, коли враховано реальну сезонність (sin‑cos підхід) і модель навчається на достатньо великому масиві даних.  
+   - При цьому очищення від аномалій і грамотне розбиття на train/test дозволяють оцінити справжню здатність моделі до передбачення.  
+   - На маленьких часових інтервалах похибка прогнозу зростає, оскільки модель не бачить повноцінної картини сезонних і багаторічних коливань.
+   '''
