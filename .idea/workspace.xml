@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_2 version 2.0">
-      <change beforePath="$PROJECT_DIR$/task_2/home_work_2_Nikoriak.py" beforeDir="false" afterPath="$PROJECT_DIR$/task_2/home_work_2_Nikoriak.py" afterDir="false" />
+    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_2 version 2.1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +21,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/task_3/Lesson_1_4/HW_3.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -44,17 +47,19 @@
     "Python.get_test_ogimet.executor": "Run",
     "Python.home_work_1_NIKORIAK.executor": "Run",
     "Python.home_work_2_Nikoriak.executor": "Run",
+    "Python.home_work_3_Nikoriak.executor": "Run",
     "Python.telegram_filter.executor": "Run",
     "Python.tinter_r.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/5302/PycharmProjects/Data_Science_Course_SSWU/task_2"
+    "last_opened_file_path": "C:/Users/5302/PycharmProjects/Data_Science_Course_SSWU/task_3"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_3" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_2" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_1" />
@@ -65,7 +70,7 @@
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.home_work_2_Nikoriak">
+  <component name="RunManager" selected="Python.home_work_3_Nikoriak">
     <configuration name="L_1_5_non-linear_regression" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Data_Science_Course_SSWU" />
       <option name="ENV_FILES" value="" />
@@ -110,28 +115,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="home_work_1_NIKORIAK" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Data_Science_Course_SSWU" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_1" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_1/home_work_1_NIKORIAK.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="home_work_2_Nikoriak" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Data_Science_Course_SSWU" />
       <option name="ENV_FILES" value="" />
@@ -146,6 +129,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_2/home_work_2_Nikoriak.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="home_work_3_Nikoriak" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Data_Science_Course_SSWU" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_3/home_work_3_Nikoriak.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -184,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.home_work_3_Nikoriak" />
         <item itemvalue="Python.home_work_2_Nikoriak" />
         <item itemvalue="Python.L_1_5_non-linear_regression" />
         <item itemvalue="Python.Non-Linear_extrapolation" />
         <item itemvalue="Python.telegram_filter" />
-        <item itemvalue="Python.home_work_1_NIKORIAK" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742836287255</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="task_2 version 2.1">
+      <option name="closed" value="true" />
+      <created>1742836737589</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742836737589</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -257,7 +270,8 @@
     <MESSAGE value="task_1 version 1.5" />
     <MESSAGE value="task_2 version 1.0" />
     <MESSAGE value="task_2 version 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="task_2 version 2.0" />
+    <MESSAGE value="task_2 version 2.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="task_2 version 2.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
