@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_5 version 1.1" />
+    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_5 version 1.5" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,10 +88,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\Lesson" />
+      <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_5" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_5\data" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_4" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_2\Lesson_1_3" />
-      <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_2" />
     </key>
   </component>
   <component name="RunManager" selected="Python.plot_visual">
@@ -243,6 +243,7 @@
       <option name="presentableId" value="Default" />
       <updated>1742118805606</updated>
       <workItem from="1745746442487" duration="13715000" />
+      <workItem from="1745780937641" duration="626000" />
     </task>
     <task id="LOCAL-00001" summary="task_1">
       <option name="closed" value="true" />
@@ -308,7 +309,31 @@
       <option name="project" value="LOCAL" />
       <updated>1745779272395</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="task_5 version 1.2">
+      <option name="closed" value="true" />
+      <created>1745781256311</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1745781256311</updated>
+    </task>
+    <task id="LOCAL-00010" summary="task_5 version 1.3">
+      <option name="closed" value="true" />
+      <created>1745781273339</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1745781273339</updated>
+    </task>
+    <task id="LOCAL-00011" summary="task_5 version 1.5">
+      <option name="closed" value="true" />
+      <created>1745781309328</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1745781309328</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +348,10 @@
     <MESSAGE value="task_2 version 2.1" />
     <MESSAGE value="task_3 version 1.0" />
     <MESSAGE value="task_5 version 1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="task_5 version 1.1" />
+    <MESSAGE value="task_5 version 1.2" />
+    <MESSAGE value="task_5 version 1.3" />
+    <MESSAGE value="task_5 version 1.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="task_5 version 1.5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
