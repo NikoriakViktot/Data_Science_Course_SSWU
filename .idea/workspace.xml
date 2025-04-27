@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_2 version 2.1">
+    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_3 version 1.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +22,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "NikoriakViktot"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:NikoriakViktot/Data_Science_Course_SSWU.git",
+    "accountId": "e9dc2615-1d9b-457b-8acb-82255ac41052"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/task_3/Lesson_1_4/HW_3.py" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -29,7 +41,7 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2uOTpnp2yvhVvghHLKhturamEZ0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -44,34 +56,48 @@
     "Python.HW_1_Nikoriak.executor": "Run",
     "Python.L_1_5_non-linear_regression.executor": "Run",
     "Python.Non-Linear_extrapolation.executor": "Run",
+    "Python.crops_yeild.executor": "Run",
+    "Python.file_maker.executor": "Run",
     "Python.get_test_ogimet.executor": "Run",
     "Python.home_work_1_NIKORIAK.executor": "Run",
     "Python.home_work_2_Nikoriak.executor": "Run",
     "Python.home_work_3_Nikoriak.executor": "Run",
+    "Python.homework_Nikoriak_DSS.executor": "Run",
+    "Python.plot_visual.executor": "Run",
     "Python.telegram_filter.executor": "Run",
     "Python.tinter_r.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/5302/PycharmProjects/Data_Science_Course_SSWU/task_3"
+    "last_opened_file_path": "C:/Users/5302/PycharmProjects/Data_Science_Course_SSWU/task_4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_4" />
+      <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_3" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_2" />
-      <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_1" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_5\data" />
+      <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_4" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_2\Lesson_1_3" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_2" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.home_work_3_Nikoriak">
-    <configuration name="L_1_5_non-linear_regression" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.plot_visual">
+    <configuration name="crops_yeild" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Data_Science_Course_SSWU" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -80,11 +106,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson_1_5" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson_1_5/L_1_5_non-linear_regression.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_4/crops_yeild.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -93,7 +120,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Non-Linear_extrapolation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="file_maker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Data_Science_Course_SSWU" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,33 +129,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lesson_1_5" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lesson_1_5/Non-Linear_extrapolation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="home_work_2_Nikoriak" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Data_Science_Course_SSWU" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_2/home_work_2_Nikoriak.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_4/file_maker.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -150,6 +156,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_3/home_work_3_Nikoriak.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -159,7 +166,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="telegram_filter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="homework_Nikoriak_DSS" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Data_Science_Course_SSWU" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,11 +175,35 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/meteo_parser" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/meteo_parser/telegram_filter.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_4/homework_Nikoriak_DSS.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plot_visual" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Data_Science_Course_SSWU" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_4/plot_visual.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,18 +220,19 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.plot_visual" />
+        <item itemvalue="Python.homework_Nikoriak_DSS" />
+        <item itemvalue="Python.file_maker" />
+        <item itemvalue="Python.crops_yeild" />
         <item itemvalue="Python.home_work_3_Nikoriak" />
-        <item itemvalue="Python.home_work_2_Nikoriak" />
-        <item itemvalue="Python.L_1_5_non-linear_regression" />
-        <item itemvalue="Python.Non-Linear_extrapolation" />
-        <item itemvalue="Python.telegram_filter" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-48aec45f0201-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17011.127" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PY-251.23774.444" />
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
       </set>
     </attachedChunks>
   </component>
@@ -212,6 +244,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1742118805606</updated>
+      <workItem from="1745746442487" duration="12203000" />
     </task>
     <task id="LOCAL-00001" summary="task_1">
       <option name="closed" value="true" />
@@ -261,8 +294,19 @@
       <option name="project" value="LOCAL" />
       <updated>1742836737589</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="task_3 version 1.0">
+      <option name="closed" value="true" />
+      <created>1742898629892</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1742898629892</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="task_1" />
@@ -271,7 +315,8 @@
     <MESSAGE value="task_2 version 1.0" />
     <MESSAGE value="task_2 version 2.0" />
     <MESSAGE value="task_2 version 2.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="task_2 version 2.1" />
+    <MESSAGE value="task_3 version 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="task_3 version 1.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -288,5 +333,12 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Data_Science_Course_SSWU$crops_yeild.coverage" NAME="crops_yeild Coverage Results" MODIFIED="1745749940050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_4" />
+    <SUITE FILE_PATH="coverage/Data_Science_Course_SSWU$file_maker.coverage" NAME="file_maker Coverage Results" MODIFIED="1745751041835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_4" />
+    <SUITE FILE_PATH="coverage/Data_Science_Course_SSWU$home_work_3_Nikoriak.coverage" NAME="home_work_3_Nikoriak Coverage Results" MODIFIED="1745749562230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_3" />
+    <SUITE FILE_PATH="coverage/Data_Science_Course_SSWU$plot_visual.coverage" NAME="plot_visual Coverage Results" MODIFIED="1745753762932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_4" />
+    <SUITE FILE_PATH="coverage/Data_Science_Course_SSWU$homework_Nikoriak_DSS.coverage" NAME="homework_Nikoriak_DSS Coverage Results" MODIFIED="1745752541914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_4" />
   </component>
 </project>
