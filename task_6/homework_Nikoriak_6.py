@@ -15,6 +15,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
+
+
 # Завантаження файлу
 
 
@@ -45,6 +47,7 @@ def plot_top5_crops(df):
     plt.tight_layout()
     plt.show()
 
+
 def plot_score_norm(df):
     plt.figure(figsize=(16, 8))
     sns.barplot(
@@ -61,6 +64,7 @@ def plot_score_norm(df):
     plt.tight_layout()
     plt.show()
 
+
 def plot_olap_cube(df):
     fig = px.scatter_3d(
         df,
@@ -74,14 +78,16 @@ def plot_olap_cube(df):
     fig.update_traces(marker=dict(opacity=0.7))
     fig.show()
 
+
 def plot_heatmap(df):
     pivot_table = df.pivot_table(values='SCOR_norm', index='Crop_Eng', columns='Region', aggfunc='mean')
     plt.figure(figsize=(16, 8))
-    sns.heatmap(pivot_table,annot=True, cmap="viridis")
+    sns.heatmap(pivot_table, annot=True, cmap="viridis")
     plt.title("SCOR (нормалізований) по культурах і регіонах")
     plt.xticks(rotation=90)
     plt.tight_layout()
     plt.show()
+
 
 def plot_cheapest_crops(df):
     best_crops = df.loc[df.groupby('Region')['Cost_SCOR'].idxmin()]
@@ -91,6 +97,7 @@ def plot_cheapest_crops(df):
     plt.xticks(rotation=90)
     plt.tight_layout()
     plt.show()
+
 
 def plot_crop_ratings(df):
     rating = df.groupby('Crop_Eng')[['SCOR_norm', 'Fert_SCOR', 'Cost_SCOR']].mean().sort_values('SCOR_norm')
@@ -108,6 +115,7 @@ def plot_total_scor_ranking(df):
     plt.tight_layout()
     plt.show()
 
+
 def plot_region_total_scor(df):
     region_avg = df.groupby('Region')['SCOR_total'].mean().sort_values(ascending=False)
     plt.figure(figsize=(12, 6))
@@ -119,6 +127,7 @@ def plot_region_total_scor(df):
     plt.tight_layout()
     plt.show()
 
+
 def plot_best_crop_per_region(df):
     best = df.loc[df.groupby("Region")["SCOR_total"].idxmax()]
     plt.figure(figsize=(14, 6))
@@ -127,7 +136,6 @@ def plot_best_crop_per_region(df):
     plt.ylabel("SCOR_total")
     plt.xticks(rotation=90)
     plt.legend(title='Культура', loc='upper left', bbox_to_anchor=(1, 1))
-
     plt.tight_layout()
     plt.show()
 
@@ -162,11 +170,11 @@ if __name__ == '__main__':
         try:
             choice = int(input("Ваш вибір: "))
         except ValueError:
-            print("❌ Введіть число!")
+            print("Введіть число!")
             continue
 
         if choice == 0:
-            print("✅ Вихід з програми.")
+            print("Вихід з програми.")
             break
         elif choice == 1:
             plot_top5_crops(df)
@@ -214,16 +222,15 @@ if __name__ == '__main__':
 
                 df = calculate_scor_total(df, weights)
 
-                print("✅ Нові нормалізовані ваги застосовано:")
+                print("Нові нормалізовані ваги застосовано:")
                 for key, value in weights.items():
                     print(f"   {key}: {value['weight']:.2f} ({'max' if value['maximize'] else 'min'})")
 
             except ValueError:
-                print("❌ Введіть правильні числові значення.")
+                print("Введіть правильні числові значення.")
 
         else:
-            print("❌ Невірний вибір. Введіть число від 0 до 10")
-
+            print("Невірний вибір. Введіть число від 0 до 10")
 
 # ----------------------------- Висновок Домашнього Завдання №5 -----------------------------
 
@@ -264,6 +271,4 @@ maximize=True означає, що чим більше — тим краще (н
 maximize=False означає, що чим менше — тим краще (наприклад, витрати).
 
 '''
-
 # --------------------------------------------------------------------------------------------------------
-
