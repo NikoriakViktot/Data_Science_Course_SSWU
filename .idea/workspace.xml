@@ -4,45 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_5 version 1.7">
+    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_7 version 1.71">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_1/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/task_1/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Картопля_2016.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Картопля_2016.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Картопля_2017.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Картопля_2017.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Картопля_2018.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Картопля_2018.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Картопля_2019.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Картопля_2019.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Картопля_2020.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Картопля_2020.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Картопля_2021.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Картопля_2021.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Кукурудза_2016.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Кукурудза_2016.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Кукурудза_2017.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Кукурудза_2017.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Кукурудза_2018.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Кукурудза_2018.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Кукурудза_2019.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Кукурудза_2019.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Кукурудза_2020.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Кукурудза_2020.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Кукурудза_2021.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Кукурудза_2021.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Пшениця_2016.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Пшениця_2016.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Пшениця_2017.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Пшениця_2017.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Пшениця_2018.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Пшениця_2018.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Пшениця_2019.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Пшениця_2019.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Пшениця_2020.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Пшениця_2020.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Пшениця_2021.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Пшениця_2021.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Соняшник_2016.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Соняшник_2016.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Соняшник_2017.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Соняшник_2017.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Соняшник_2018.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Соняшник_2018.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Соняшник_2019.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Соняшник_2019.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Соняшник_2020.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Соняшник_2020.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Соняшник_2021.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Соняшник_2021.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Соя_2016.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Соя_2016.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Соя_2017.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Соя_2017.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Соя_2018.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Соя_2018.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Соя_2019.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Соя_2019.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Соя_2020.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Соя_2020.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Соя_2021.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Соя_2021.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Ячмінь_2016.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Ячмінь_2016.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Ячмінь_2017.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Ячмінь_2017.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Ячмінь_2018.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Ячмінь_2018.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Ячмінь_2019.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Ячмінь_2019.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Ячмінь_2020.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Ячмінь_2020.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task_5/data/AgroStats_map-Урожайність-Ячмінь_2021.csv" beforeDir="false" afterPath="$PROJECT_DIR$/task_5/data/raw/AgroStats_map-Урожайність-Ячмінь_2021.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -74,6 +37,9 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/task_3/Lesson_1_4/HW_3.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -100,6 +66,8 @@
     &quot;Python.home_work_1_NIKORIAK.executor&quot;: &quot;Run&quot;,
     &quot;Python.home_work_2_Nikoriak.executor&quot;: &quot;Run&quot;,
     &quot;Python.home_work_3_Nikoriak.executor&quot;: &quot;Run&quot;,
+    &quot;Python.homework_Nikoriak_6.executor&quot;: &quot;Run&quot;,
+    &quot;Python.homework_Nikoriak_7.executor&quot;: &quot;Run&quot;,
     &quot;Python.homework_Nikoriak_DSS.executor&quot;: &quot;Run&quot;,
     &quot;Python.plot_visual.executor&quot;: &quot;Run&quot;,
     &quot;Python.telegram_filter.executor&quot;: &quot;Run&quot;,
@@ -109,7 +77,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/5302/PycharmProjects/Data_Science_Course_SSWU/task_6/data&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/5302/PycharmProjects/Data_Science_Course_SSWU/task_7/data&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -120,11 +88,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_7\data" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_6\data" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_6" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\Lesson" />
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_4" />
-      <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_5\data\raw" />
@@ -134,8 +102,8 @@
       <recent name="C:\Users\5302\PycharmProjects\Data_Science_Course_SSWU\task_4" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.task_1/docker-compose.yaml: Compose Deployment">
-    <configuration name="file_maker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.homework_Nikoriak_7">
+    <configuration name="homework_Nikoriak_6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Data_Science_Course_SSWU" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -144,12 +112,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_6" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_4/file_maker.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_6/homework_Nikoriak_6.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -158,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="homework_Nikoriak_DSS" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="homework_Nikoriak_7" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Data_Science_Course_SSWU" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,12 +135,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/task_7" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_4/homework_Nikoriak_DSS.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task_7/homework_Nikoriak_7.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -233,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.homework_Nikoriak_7" />
+        <item itemvalue="Python.homework_Nikoriak_6" />
         <item itemvalue="Docker.task_1/docker-compose.yaml: Compose Deployment" />
         <item itemvalue="Docker.task_1/docker-compose.yaml.mongo: Compose Deployment" />
         <item itemvalue="Python.plot_visual" />
-        <item itemvalue="Python.homework_Nikoriak_DSS" />
-        <item itemvalue="Python.file_maker" />
       </list>
     </recent_temporary>
   </component>
@@ -270,6 +238,8 @@
       <workItem from="1746453759867" duration="620000" />
       <workItem from="1746520385152" duration="6000" />
       <workItem from="1746546875697" duration="2215000" />
+      <workItem from="1746946315824" duration="33169000" />
+      <workItem from="1747030980012" duration="1156000" />
     </task>
     <task id="LOCAL-00001" summary="task_1">
       <option name="closed" value="true" />
@@ -375,7 +345,63 @@
       <option name="project" value="LOCAL" />
       <updated>1745781779088</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="task_6 version 1.2">
+      <option name="closed" value="true" />
+      <created>1746957128156</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1746957128156</updated>
+    </task>
+    <task id="LOCAL-00015" summary="task_6 version 2.0">
+      <option name="closed" value="true" />
+      <created>1746989080518</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1746989080518</updated>
+    </task>
+    <task id="LOCAL-00016" summary="task_6 version 2.1">
+      <option name="closed" value="true" />
+      <created>1746990186964</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1746990186964</updated>
+    </task>
+    <task id="LOCAL-00017" summary="task_6 version 2.2">
+      <option name="closed" value="true" />
+      <created>1746990463433</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1746990463433</updated>
+    </task>
+    <task id="LOCAL-00018" summary="task_6 version 2.3">
+      <option name="closed" value="true" />
+      <created>1746995956701</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1746995956701</updated>
+    </task>
+    <task id="LOCAL-00019" summary="task_7 version 1.7">
+      <option name="closed" value="true" />
+      <created>1746997008915</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1746997008915</updated>
+    </task>
+    <task id="LOCAL-00020" summary="task_7 version 1.71">
+      <option name="closed" value="true" />
+      <created>1746997266828</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1746997266828</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +421,14 @@
     <MESSAGE value="task_5 version 1.5" />
     <MESSAGE value="task_5 version 1.6" />
     <MESSAGE value="task_5 version 1.7" />
-    <option name="LAST_COMMIT_MESSAGE" value="task_5 version 1.7" />
+    <MESSAGE value="task_6 version 1.2" />
+    <MESSAGE value="task_6 version 2.0" />
+    <MESSAGE value="task_6 version 2.1" />
+    <MESSAGE value="task_6 version 2.2" />
+    <MESSAGE value="task_6 version 2.3" />
+    <MESSAGE value="task_7 version 1.7" />
+    <MESSAGE value="task_7 version 1.71" />
+    <option name="LAST_COMMIT_MESSAGE" value="task_7 version 1.71" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -414,10 +447,12 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Data_Science_Course_SSWU$homework_Nikoriak_6.coverage" NAME="homework_Nikoriak_6 Coverage Results" MODIFIED="1746987930752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_6" />
     <SUITE FILE_PATH="coverage/Data_Science_Course_SSWU$crops_yeild.coverage" NAME="crops_yeild Coverage Results" MODIFIED="1745749940050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_4" />
     <SUITE FILE_PATH="coverage/Data_Science_Course_SSWU$file_maker.coverage" NAME="file_maker Coverage Results" MODIFIED="1745751041835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_4" />
     <SUITE FILE_PATH="coverage/Data_Science_Course_SSWU$home_work_3_Nikoriak.coverage" NAME="home_work_3_Nikoriak Coverage Results" MODIFIED="1745749562230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_3" />
     <SUITE FILE_PATH="coverage/Data_Science_Course_SSWU$plot_visual.coverage" NAME="plot_visual Coverage Results" MODIFIED="1745753762932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_4" />
     <SUITE FILE_PATH="coverage/Data_Science_Course_SSWU$homework_Nikoriak_DSS.coverage" NAME="homework_Nikoriak_DSS Coverage Results" MODIFIED="1745752541914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_4" />
+    <SUITE FILE_PATH="coverage/Data_Science_Course_SSWU$homework_Nikoriak_7.coverage" NAME="homework_Nikoriak_7 Coverage Results" MODIFIED="1746996630843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/task_7" />
   </component>
 </project>
