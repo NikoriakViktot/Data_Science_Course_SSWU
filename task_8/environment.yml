@@ -1,0 +1,14 @@
+name: cv_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - opencv
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - scikit-image
+  - jupyter
+  - pip
+

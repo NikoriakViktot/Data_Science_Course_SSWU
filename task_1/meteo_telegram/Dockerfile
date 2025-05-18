@@ -18,9 +18,9 @@ WORKDIR /opt/code/meteo_telegram
 # Встановлення та оновлення pip
 RUN pip install --upgrade pip setuptools
 
-# Копіювання файлу requirements.txt та встановлення залежностей
+# Копіювання файлу environment.yml та встановлення залежностей
 COPY requirements.txt /opt/code/meteo_telegram/
-RUN pip install --no-cache-dir -r /opt/code/meteo_telegram/requirements.txt
+RUN pip install --no-cache-dir -r /opt/code/meteo_telegram/environment.yml
 
 # Копіювання всього коду в контейнер
 COPY . /opt/code/meteo_telegram/
