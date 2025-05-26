@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_12 version 2.1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_12 version 2.2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -245,7 +243,7 @@
       <workItem from="1747573202424" duration="5397000" />
       <workItem from="1747579742083" duration="6370000" />
       <workItem from="1748179402286" duration="1536000" />
-      <workItem from="1748242012186" duration="13416000" />
+      <workItem from="1748242012186" duration="13577000" />
     </task>
     <task id="LOCAL-00001" summary="task_1">
       <option name="closed" value="true" />
@@ -463,7 +461,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748258244406</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="task_12 version 2.2">
+      <option name="closed" value="true" />
+      <created>1748258756492</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1748258756492</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +487,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="task_1 version 1.5" />
     <MESSAGE value="task_2 version 1.0" />
     <MESSAGE value="task_2 version 2.0" />
     <MESSAGE value="task_2 version 2.1" />
@@ -506,7 +511,8 @@
     <MESSAGE value="task_8 version 2.6" />
     <MESSAGE value="task_12 version 2.0" />
     <MESSAGE value="task_12 version 2.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="task_12 version 2.1" />
+    <MESSAGE value="task_12 version 2.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="task_12 version 2.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
