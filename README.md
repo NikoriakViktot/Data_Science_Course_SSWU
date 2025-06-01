@@ -2,7 +2,7 @@
 # Data Science Course by Sigma Software University
  Intensive 21-lesson program (10 weeks, 2 modules) focused on full-stack Data Science pipeline: from statistical modeling and machine learning to decision support and geospatial analysis.
 
-## 🗂️ Table of Contents
+## ️ Table of Contents
 
 - [🎯 Key Skills](#key-skills)
 - [🧠 Final Projects](#final-projects-include)
@@ -31,6 +31,9 @@
 - Business forecasting, SCOR-index modeling, CRM credit scoring
 - GIS analysis with GeoPandas, Digital Twins, e-commerce analytics
 
+[🔝 Back to top](#-table-of-contents)
+
+
 ## Final projects include:
 - DSS for drought-resilient crops
 - Customer segmentation (KMeans, GMM, PCA)
@@ -38,8 +41,14 @@
 - SCOR-based CRM simulator for credit risk
 - GIS pipeline for terrain analysis with ICESat-2 data
 
+[🔝 Back to top](#-table-of-contents)
+
+
 ## Python stack
 `Numpy`, `Pandas`, `Statsmodels`, `Scikit-learn`, `Tensorflow`, `Keras`, `OpenCV`, `GeoPandas`, `Matplotlib`, `OR-Tools`, etc.
+
+[🔝 Back to top](#-table-of-contents)
+
 
 ## Certificate
 
@@ -47,6 +56,9 @@
 🔗 [View Certificate](https://courses.university.sigma.software/certificates/0fdd0805968b4407aad6f8f2255284e5)
 
 ---
+
+[🔝 Back to top](#-table-of-contents)
+
 ___
 
 ## task_1 — Homework 1: Trend Modeling with Noise
@@ -76,6 +88,8 @@ This folder contains code and scripts for Homework 1 (Level I), focused on:
 
 ---
 
+[🔝 Back to top](#-table-of-contents)
+
 --- 
 
 ## task_2 — Homework 2: Real Data Modeling & Forecasting
@@ -103,6 +117,9 @@ This folder contains scripts for analyzing real temperature data from meteorolog
 * Real stations: Kyiv, Lviv, Kharkiv, etc.
 
 ---
+
+[🔝 Back to top](#-table-of-contents)
+
 
 ---
 
@@ -149,6 +166,8 @@ This folder contains implementations of recurrent smoothing algorithms for time 
 
 ---
 
+[🔝 Back to top](#-table-of-contents)
+
 ---
 
 ## task_4 — Homework 4: Polynomial Regression & Forecasting
@@ -187,6 +206,8 @@ This folder contains a full pipeline for polynomial modeling and forecasting of 
 * Trend extension for +0.5 step is feasible for short-term forecasting.
 
 ---
+
+[🔝 Back to top](#-table-of-contents)
 
 ---
 
@@ -230,6 +251,7 @@ This folder contains a prototype of a Decision Support System (DSS) that evaluat
 * The system demonstrates high potential for real-world agri-decision support.
 
 ---
+[🔝 Back to top](#-table-of-contents)
 
 ---
 
@@ -257,9 +279,9 @@ This folder contains a prototype of a Decision Support System (DSS) that evaluat
 
 ---
 
+[🔝 Back to top](#-table-of-contents)
+
 ---
-
-
 
 ## task_7 — Homework 7: Clustering Agro-Efficiency: SCOR-based DSS
 
@@ -321,6 +343,8 @@ To develop a cluster analysis system for evaluating crop-region combinations bas
 The developed clustering model supports **data-driven agro-decision making** by clearly separating effective vs. inefficient crop-region combinations. The `SCOR_total` framework can be directly embedded into a DSS platform for agricultural planning and optimization under drought and cost constraints.
 
 ---
+[🔝 Back to top](#-table-of-contents)
+
 
 ---
 
@@ -370,6 +394,8 @@ The **contour-based method** is more efficient for isoline extraction and shape 
 
 
 ---
+
+[🔝 Back to top](#-table-of-contents)
 
 ---
 
@@ -422,6 +448,8 @@ This project explores customer segmentation using clustering techniques. The goa
 
 ---
 
+[🔝 Back to top](#-table-of-contents)
+
 ---
 
 ## task_10 — Titanic Survival Prediction
@@ -449,6 +477,8 @@ NN with `[33, 12, 8, 4]`, `ReLU`, `Adam`, `Dropout=0.2`
 Feature engineering + tuned NN can outperform traditional models on tabular data.
 
 ---
+
+[🔝 Back to top](#-table-of-contents)
 
 ---
 
@@ -506,6 +536,8 @@ A full pipeline combining sentiment analysis using RNN (LSTM) on IMDB reviews, U
 * spaCy’s word vectors capture contextual similarity even for Ukrainian text.
 
 ---
+
+[🔝 Back to top](#-table-of-contents)
 
 ---
 
@@ -575,6 +607,10 @@ This project combines **accuracy evaluation of Digital Elevation Models (DEMs)**
 
 ---
 
+[🔝 Back to top](#-table-of-contents)
+
+---
+
 ##  About the Author
 
 **Viktor Nikoriak**  
@@ -587,6 +623,10 @@ PhD Researcher in Hydrology | Python Developer | GIS & ML Enthusiast
 
 This project is licensed under the MIT License.  
 See the [LICENSE](LICENSE) file for details.
+
+---
+
+[🔝 Back to top](#-table-of-contents)
 
 ---
 
