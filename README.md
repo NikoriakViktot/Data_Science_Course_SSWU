@@ -41,13 +41,12 @@
 - SCOR-based CRM simulator for credit risk
 - GIS pipeline for terrain analysis with ICESat-2 data
 
-[🔝 Back to top](#table-of-contents)
+
 
 
 ## Python stack
 `Numpy`, `Pandas`, `Statsmodels`, `Scikit-learn`, `Tensorflow`, `Keras`, `OpenCV`, `GeoPandas`, `Matplotlib`, `OR-Tools`, etc.
 
-[🔝 Back to top](#table-of-contents)
 
 
 ## Certificate
@@ -57,7 +56,7 @@
 
 ---
 
-[🔝 Back to top](#table-of-contents)
+
 
 ___
 
@@ -88,7 +87,7 @@ This folder contains code and scripts for Homework 1 (Level I), focused on:
 
 ---
 
-[🔝 Back to top](#table-of-contents)
+[🔝 Back to top](https://github.com/NikoriakViktot/Data_Science_Course_SSWU#table-of-contents)
 
 --- 
 
@@ -118,7 +117,7 @@ This folder contains scripts for analyzing real temperature data from meteorolog
 
 ---
 
-[🔝 Back to top](#table-of-contents)
+[🔝 Back to top](https://github.com/NikoriakViktot/Data_Science_Course_SSWU#table-of-contents)
 
 
 ---
@@ -166,7 +165,7 @@ This folder contains implementations of recurrent smoothing algorithms for time 
 
 ---
 
-[🔝 Back to top](#table-of-contents)
+[🔝 Back to top](https://github.com/NikoriakViktot/Data_Science_Course_SSWU#table-of-contents)
 
 ---
 
@@ -207,7 +206,7 @@ This folder contains a full pipeline for polynomial modeling and forecasting of 
 
 ---
 
-[🔝 Back to top](#table-of-contents)
+[🔝 Back to top](https://github.com/NikoriakViktot/Data_Science_Course_SSWU#table-of-contents)
 
 ---
 
@@ -251,7 +250,7 @@ This folder contains a prototype of a Decision Support System (DSS) that evaluat
 * The system demonstrates high potential for real-world agri-decision support.
 
 ---
-[🔝 Back to top](#table-of-contents)
+[🔝 Back to top](https://github.com/NikoriakViktot/Data_Science_Course_SSWU#table-of-contents)
 
 ---
 
@@ -279,7 +278,7 @@ This folder contains a prototype of a Decision Support System (DSS) that evaluat
 
 ---
 
-[🔝 Back to top](#table-of-contents)
+[🔝 Back to top](https://github.com/NikoriakViktot/Data_Science_Course_SSWU#table-of-contents)
 
 ---
 
@@ -343,7 +342,7 @@ To develop a cluster analysis system for evaluating crop-region combinations bas
 The developed clustering model supports **data-driven agro-decision making** by clearly separating effective vs. inefficient crop-region combinations. The `SCOR_total` framework can be directly embedded into a DSS platform for agricultural planning and optimization under drought and cost constraints.
 
 ---
-[🔝 Back to top](#table-of-contents)
+[🔝 Back to top](https://github.com/NikoriakViktot/Data_Science_Course_SSWU#table-of-contents)
 
 
 ---
@@ -395,7 +394,7 @@ The **contour-based method** is more efficient for isoline extraction and shape 
 
 ---
 
-[🔝 Back to top](#table-of-contents)
+[🔝 Back to top](https://github.com/NikoriakViktot/Data_Science_Course_SSWU#table-of-contents)
 
 ---
 
@@ -448,7 +447,7 @@ This project explores customer segmentation using clustering techniques. The goa
 
 ---
 
-[🔝 Back to top](#table-of-contents)
+[🔝 Back to top](https://github.com/NikoriakViktot/Data_Science_Course_SSWU#table-of-contents)
 
 ---
 
@@ -478,7 +477,7 @@ Feature engineering + tuned NN can outperform traditional models on tabular data
 
 ---
 
-[🔝 Back to top](#table-of-contents)
+[🔝 Back to top](https://github.com/NikoriakViktot/Data_Science_Course_SSWU#table-of-contents)
 
 ---
 
@@ -537,7 +536,7 @@ A full pipeline combining sentiment analysis using RNN (LSTM) on IMDB reviews, U
 
 ---
 
-[🔝 Back to top](#table-of-contents)
+[🔝 Back to top](https://github.com/NikoriakViktot/Data_Science_Course_SSWU#table-of-contents)
 
 ---
 
@@ -607,7 +606,7 @@ This project combines **accuracy evaluation of Digital Elevation Models (DEMs)**
 
 ---
 
-[🔝 Back to top](#table-of-contents)
+[🔝 Back to top](https://github.com/NikoriakViktot/Data_Science_Course_SSWU#table-of-contents)
 
 ---
 
@@ -626,7 +625,7 @@ See the [LICENSE](LICENSE) file for details.
 
 ---
 
-[🔝 Back to top](#table-of-contents)
+[🔝 Back to top](https://github.com/NikoriakViktot/Data_Science_Course_SSWU#table-of-contents)
 
 ---
 
