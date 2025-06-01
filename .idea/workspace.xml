@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="task_12 version 2.2" />
+    <list default="true" id="b2b87492-e66e-403e-b13f-856778a6e0ca" name="Changes" comment="final version 2.8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,42 +50,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.task_1/docker-compose.yaml.app_fastapi: Compose Deployment.executor": "Run",
-    "Docker.task_1/docker-compose.yaml.mongo: Compose Deployment.executor": "Run",
-    "Docker.task_1/docker-compose.yaml: Compose Deployment.executor": "Run",
-    "Python.HW_1_Nikoriak.executor": "Run",
-    "Python.L_1_5_non-linear_regression.executor": "Run",
-    "Python.Non-Linear_extrapolation.executor": "Run",
-    "Python.crops_yeild.executor": "Run",
-    "Python.file_maker.executor": "Run",
-    "Python.get_test_ogimet.executor": "Run",
-    "Python.home_work_1_NIKORIAK.executor": "Run",
-    "Python.home_work_2_Nikoriak.executor": "Run",
-    "Python.home_work_3_Nikoriak.executor": "Run",
-    "Python.homework_8_Nikoriak.executor": "Run",
-    "Python.homework_Nikoriak_6.executor": "Run",
-    "Python.homework_Nikoriak_7.executor": "Run",
-    "Python.homework_Nikoriak_DSS.executor": "Run",
-    "Python.plot_visual.executor": "Run",
-    "Python.telegram_filter.executor": "Run",
-    "Python.tinter_r.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/user/PycharmProjects/Data_Science_Course_SSWU/task_12/data",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.task_1/docker-compose.yaml.app_fastapi: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.task_1/docker-compose.yaml.mongo: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.task_1/docker-compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Python.HW_1_Nikoriak.executor&quot;: &quot;Run&quot;,
+    &quot;Python.L_1_5_non-linear_regression.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Non-Linear_extrapolation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.crops_yeild.executor&quot;: &quot;Run&quot;,
+    &quot;Python.file_maker.executor&quot;: &quot;Run&quot;,
+    &quot;Python.get_test_ogimet.executor&quot;: &quot;Run&quot;,
+    &quot;Python.home_work_1_NIKORIAK.executor&quot;: &quot;Run&quot;,
+    &quot;Python.home_work_2_Nikoriak.executor&quot;: &quot;Run&quot;,
+    &quot;Python.home_work_3_Nikoriak.executor&quot;: &quot;Run&quot;,
+    &quot;Python.homework_8_Nikoriak.executor&quot;: &quot;Run&quot;,
+    &quot;Python.homework_Nikoriak_6.executor&quot;: &quot;Run&quot;,
+    &quot;Python.homework_Nikoriak_7.executor&quot;: &quot;Run&quot;,
+    &quot;Python.homework_Nikoriak_DSS.executor&quot;: &quot;Run&quot;,
+    &quot;Python.plot_visual.executor&quot;: &quot;Run&quot;,
+    &quot;Python.telegram_filter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tinter_r.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/PycharmProjects/Data_Science_Course_SSWU/task_12/data&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\PycharmProjects\Data_Science_Course_SSWU\task_12\data" />
@@ -212,8 +212,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
-        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PY-251.23774.444" />
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
       </set>
     </attachedChunks>
   </component>
@@ -244,6 +244,7 @@
       <workItem from="1747579742083" duration="6370000" />
       <workItem from="1748179402286" duration="1536000" />
       <workItem from="1748242012186" duration="13577000" />
+      <workItem from="1748775022413" duration="8338000" />
     </task>
     <task id="LOCAL-00001" summary="task_1">
       <option name="closed" value="true" />
@@ -469,7 +470,79 @@
       <option name="project" value="LOCAL" />
       <updated>1748258756492</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="final version 1.2">
+      <option name="closed" value="true" />
+      <created>1748777094977</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1748777094977</updated>
+    </task>
+    <task id="LOCAL-00030" summary="final version 1.3">
+      <option name="closed" value="true" />
+      <created>1748779735382</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1748779735382</updated>
+    </task>
+    <task id="LOCAL-00031" summary="final version 1.5">
+      <option name="closed" value="true" />
+      <created>1748780271387</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1748780271387</updated>
+    </task>
+    <task id="LOCAL-00032" summary="final version 2.0">
+      <option name="closed" value="true" />
+      <created>1748780720304</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1748780720304</updated>
+    </task>
+    <task id="LOCAL-00033" summary="final version 2.1">
+      <option name="closed" value="true" />
+      <created>1748780953637</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1748780953637</updated>
+    </task>
+    <task id="LOCAL-00034" summary="final version 2.3">
+      <option name="closed" value="true" />
+      <created>1748781655928</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1748781655928</updated>
+    </task>
+    <task id="LOCAL-00035" summary="final version 2.5">
+      <option name="closed" value="true" />
+      <created>1748781914100</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1748781914100</updated>
+    </task>
+    <task id="LOCAL-00036" summary="final version 2.7">
+      <option name="closed" value="true" />
+      <created>1748782743976</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1748782743976</updated>
+    </task>
+    <task id="LOCAL-00037" summary="final version 2.8">
+      <option name="closed" value="true" />
+      <created>1748782791457</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1748782791457</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,15 +560,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="task_2 version 1.0" />
-    <MESSAGE value="task_2 version 2.0" />
-    <MESSAGE value="task_2 version 2.1" />
-    <MESSAGE value="task_3 version 1.0" />
-    <MESSAGE value="task_5 version 1.1" />
-    <MESSAGE value="task_5 version 1.2" />
-    <MESSAGE value="task_5 version 1.3" />
-    <MESSAGE value="task_5 version 1.5" />
-    <MESSAGE value="task_5 version 1.6" />
     <MESSAGE value="task_5 version 1.7" />
     <MESSAGE value="task_6 version 1.2" />
     <MESSAGE value="task_6 version 2.0" />
@@ -512,7 +576,16 @@
     <MESSAGE value="task_12 version 2.0" />
     <MESSAGE value="task_12 version 2.1" />
     <MESSAGE value="task_12 version 2.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="task_12 version 2.2" />
+    <MESSAGE value="final version 1.2" />
+    <MESSAGE value="final version 1.3" />
+    <MESSAGE value="final version 1.5" />
+    <MESSAGE value="final version 2.0" />
+    <MESSAGE value="final version 2.1" />
+    <MESSAGE value="final version 2.3" />
+    <MESSAGE value="final version 2.5" />
+    <MESSAGE value="final version 2.7" />
+    <MESSAGE value="final version 2.8" />
+    <option name="LAST_COMMIT_MESSAGE" value="final version 2.8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -479,7 +479,7 @@ Feature engineering + tuned NN can outperform traditional models on tabular data
 
 ---
 
-## task_11 —  Sentiment Analysis, Text Mining and RNN (Spacy)
+## task_11 — Sentiment Analysis, Text Mining and RNN (Spacy)
 
 #### 📘 Description:
 
