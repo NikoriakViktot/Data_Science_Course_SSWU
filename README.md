@@ -2,59 +2,52 @@
 # Data Science Course by Sigma Software University
  Intensive 21-lesson program (10 weeks, 2 modules) focused on full-stack Data Science pipeline: from statistical modeling and machine learning to decision support and geospatial analysis.
 
-
 ## 🗂️ Table of Contents
 
-* [🎯 Key Skills](#key-skills)
-* [🧠 Final Projects Include](#final-projects-include)
-* [🌐 Python Stack](#python-stack)
-* [📜 Certificate](#certificate)
-* [👤 About the Author](#about-the-author)
-* [📄 License](#license)
-* [📂 task\_1 — Homework 1: Trend Modeling with Noise](#task_1--homework-1-trend-modeling-with-noise)
-* [📂 task\_2 — Homework 2: Real Data Modeling and Forecasting](#task_2--homework-2-real-data-modeling-and-forecasting)
-* [📂 task\_3 — Homework 3: Alpha-Beta-Gamma Filtering of Time Series](#task_3--homework-3-alpha-beta-gamma-filtering-of-time-series)
-* [📂 task\_4 — Homework 4: Polynomial Regression and Forecasting](#task_4--homework-4-polynomial-regression-and-forecasting)
-* [📂 task\_5 — Homework 5: Crop Selection via SCOR Index](#task_5--homework-5-drought-resilient-crop-selection-via-scor-index)
-* [📂 task\_6 — Homework 6: ERP Analytics for Agro-Efficiency](#task_6--homework-6-erp-analytics-for-agro-efficiency)
-* [📂 task\_7 — Homework 7: Clustering Agro-Efficiency SCOR-Based DSS](#task_7--homework-7-clustering-agro-efficiency-scor-based-dss)
-* [📂 task\_8 — Homework 8: Object Detection in Bathymetric Maps](#task_8--homework-8-object-detection-in-bathymetric-maps)
-* [📂 task\_9 — Homework 9: Customer Segmentation via Clustering](#task_9--homework-9-customer-segmentation-via-clustering)
-* [📂 task\_10 — Titanic Survival Prediction](#task_10--titanic-survival-prediction)
-* [📂 task\_11 — Sentiment Analysis: Text Mining and RNN with SpaCy](#task_11--sentiment-analysis-text-mining-and-rnn-with-spacy)
-* [📂 task_12 — DEM Accuracy Assessment and ICESat-2 Ground Profile Extraction](#task_12--dem-accuracy-assessment-and-icesat-2-ground-profile-extraction)
-
+- [🎯 Key Skills](#-key-skills)
+- [🧠 Final Projects](#-final-projects-include)
+- [🌐 Python Stack](#-python-stack)
+- [📜 Certificate](#-certificate)
+- [👤 About the Author](#-about-the-author)
+- [📄 License](#-license)
+- [📂 task_1 — Homework 1: Trend Modeling with Noise](#task_1--homework-1-trend-modeling-with-noise)
+- [📂 task_2 — Homework 2: Real Data Modeling & Forecasting](#task_2--homework-2-real-data-modeling--forecasting)
+- [📂 task_3 — Homework 3: Alpha-Beta(-Gamma) Filtering](#task_3--homework-3-alpha-beta-gamma-filtering)
+- [📂 task_4 — Homework 4: Polynomial Regression & Forecasting](#task_4--homework-4-polynomial-regression--forecasting)
+- [📂 task_5 — Homework 5: Crop Selection via SCOR Index](#task_5--homework-5-crop-selection-via-scor-index)
+- [📂 task_6 — Homework 6: ERP Analytics for Agro-Efficiency](#task_6--homework-6-erp-analytics-for-agro-efficiency)
+- [📂 task_7 — Homework 7: Clustering Agro-Efficiency (SCOR-based DSS)](#task_7--homework-7-clustering-agro-efficiency-scor-based-dss)
+- [📂 task_8 — Homework 8: Object Detection in Bathymetric Maps](#task_8--homework-8-object-detection-in-bathymetric-maps)
+- [📂 task_9 — Homework 9: Customer Segmentation via Clustering](#task_9--homework-9-customer-segmentation-via-clustering)
+- [📂 task_10 — Titanic Survival Prediction](#task_10--titanic-survival-prediction)
+- [📂 task_11 — Sentiment Analysis, Text Mining & RNN (Spacy)](#task_11--sentiment-analysis-text-mining--rnn-spacy)
+- [📂 task_12 — DEM Accuracy & ICESat-2 Ground Profile Extraction](#task_12--dem-accuracy--icesat-2-ground-profile-extraction)
 ---
-
----
-
-##  Key Skills
+🎯 Key Skills:
 - Regression, Kalman filtering, anomaly detection
 - DSS & ERP development with optimization (Google OR-Tools)
 - Clustering, classification, neural networks (TensorFlow/Keras)
 - Business forecasting, SCOR-index modeling, CRM credit scoring
 - GIS analysis with GeoPandas, Digital Twins, e-commerce analytics
 
-##  Final Projects Include
+🧠 Final projects include:
 - DSS for drought-resilient crops
 - Customer segmentation (KMeans, GMM, PCA)
 - Neural network classifiers (Titanic)
 - SCOR-based CRM simulator for credit risk
 - GIS pipeline for terrain analysis with ICESat-2 data
 
-##  Python Stack
-`Numpy`, `Pandas`, `Statsmodels`, `Scikit-learn`, `Tensorflow`, `Keras`, `OpenCV`, `GeoPandas`, `Matplotlib`, `OR-Tools`, etc.
+🌐 Python stack: `Numpy`, `Pandas`, `Statsmodels`, `Scikit-learn`, `Tensorflow`, `Keras`, `OpenCV`, `GeoPandas`, `Matplotlib`, `OR-Tools`, etc.
 
-##  Certificate
+## 📜 Certificate
 
 **✅ Data Science Certificate — Sigma Software University**  
 🔗 [View Certificate](https://courses.university.sigma.software/certificates/0fdd0805968b4407aad6f8f2255284e5)
 
 ---
-
 ___
 
-##  task_1 — Homework 1: Trend Modeling with Noise
+### 📂 `task_1` — Homework 1: Trend Modeling with Noise
 
 
 #### 📘 Description:
@@ -83,7 +76,7 @@ This folder contains code and scripts for Homework 1 (Level I), focused on:
 
 --- 
 
-## task_2 — Homework 2: Real Data Modeling and Forecasting
+### 📂 `task_2` — Homework 2: Real Data Modeling & Forecasting
 
 #### 📘 Description:
 
@@ -111,7 +104,7 @@ This folder contains scripts for analyzing real temperature data from meteorolog
 
 ---
 
-## task_3 — Homework 3: Alpha-Beta(-Gamma) Filtering of Time Series
+### 📂 `task_3` — Homework 3: Alpha-Beta(-Gamma) Filtering of Time Series
 
 #### 📘 Description:
 
@@ -156,7 +149,7 @@ This folder contains implementations of recurrent smoothing algorithms for time 
 
 ---
 
-## task_4 — Homework 4: Polynomial Regression and Forecasting
+### 📂 `task_4` — Homework 4: Polynomial Regression & Forecasting
 
 #### 📘 Description:
 
@@ -195,7 +188,7 @@ This folder contains a full pipeline for polynomial modeling and forecasting of 
 
 ---
 
-## task_5 — Homework 5: Drought-Resilient Crop Selection via SCOR Index
+### 📂 `task_5` — Homework 5: Drought-Resilient Crop Selection via SCOR Index
 
 
 #### 📘 Description:
@@ -238,7 +231,7 @@ This folder contains a prototype of a Decision Support System (DSS) that evaluat
 
 ---
 
-##  task_6 — Homework 6: ERP Analytics for Agro-Efficiency
+## 📂 `task_6` — Homework 6: ERP Analytics for Agro-Efficiency
 
 
 **Topic:** Building an integrated SCOR\_total index for crop decision support based on yield, fertilizer use, and cost.
@@ -266,7 +259,7 @@ This folder contains a prototype of a Decision Support System (DSS) that evaluat
 
 
 
-## task_7 — Homework 7: Clustering Agro-Efficiency: SCOR-based DSS
+## 📂 `task_7` — Homework 7: Clustering Agro-Efficiency: SCOR-based DSS
 
 **Topic:** Cluster analysis of agricultural efficiency using SCOR-based indicators and visual analytics.
 
@@ -329,7 +322,7 @@ The developed clustering model supports **data-driven agro-decision making** by 
 
 ---
 
-## task_8 — Homework 8: Object Detection in Bathymetric Maps
+# 📂 `task_8` — Homework 8: Object Detection in Bathymetric Maps
 
 ## 📌 Task Description
 
@@ -379,7 +372,7 @@ The **contour-based method** is more efficient for isoline extraction and shape 
 ---
 
 
-## task_9 — Homework 9: Customer Segmentation via Clustering
+### 📂 `task_9` — Homework 9: Customer Segmentation via Clustering
 
 #### 📘 Description:
 
@@ -429,7 +422,7 @@ This project explores customer segmentation using clustering techniques. The goa
 
 ---
 
-## task_10 — Titanic Survival Prediction
+### 📂 `task_10` — Titanic Survival Prediction
 
 
 #### 📘 Description:
@@ -457,7 +450,7 @@ Feature engineering + tuned NN can outperform traditional models on tabular data
 
 ---
 
-##  task_11 — Sentiment Analysis: Text Mining and RNN with SpaCy
+### 📂 `task_11` — Sentiment Analysis, Text Mining & Word Embeddings (RNN + spaCy)
 
 #### 📘 Description:
 
@@ -514,7 +507,7 @@ A full pipeline combining sentiment analysis using RNN (LSTM) on IMDB reviews, U
 
 ---
 
-## task_12 — DEM Accuracy Assessment and ICESat-2 Ground Profile Extraction
+### 📂 `task_12` — DEM Accuracy Assessment & ICESat-2 Ground Profile Extraction
 
 ---
 
@@ -580,7 +573,7 @@ This project combines **accuracy evaluation of Digital Elevation Models (DEMs)**
 
 ---
 
-## About the Author
+## 👤 About the Author
 
 **Viktor Nikoriak**  
 PhD Researcher in Hydrology | Python Developer | GIS & ML Enthusiast  
@@ -588,7 +581,7 @@ PhD Researcher in Hydrology | Python Developer | GIS & ML Enthusiast
 
 ---
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License.
 ---
