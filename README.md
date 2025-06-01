@@ -20,8 +20,8 @@
 - [📂 task_8 — Homework 8: Object Detection in Bathymetric Maps](#task_8--homework-8-object-detection-in-bathymetric-maps)
 - [📂 task_9 — Homework 9: Customer Segmentation via Clustering](#task_9--homework-9-customer-segmentation-via-clustering)
 - [📂 task_10 — Titanic Survival Prediction](#task_10--titanic-survival-prediction)
-- [📂 task_11 — Sentiment Analysis, Text Mining & RNN (Spacy)](#task_11--sentiment-analysis-text-mining--rnn-spacy)
-- [📂 task_12 — DEM Accuracy & ICESat-2 Ground Profile Extraction](#task_12--dem-accuracy--icesat-2-ground-profile-extraction)
+- [📂 task_11 — Sentiment Analysis, Text Mining & RNN (Spacy)](#task_11--sentiment-analysis-text-mining-and-rnn-spacy)
+- [📂 task_12 — DEM Accuracy & ICESat-2 Ground Profile Extraction](#task_12--dem-accuracy-assessment-and-icesat-2-ground-profile-extraction)
 ---
 
 ## Key Skills
@@ -324,7 +324,7 @@ The developed clustering model supports **data-driven agro-decision making** by 
 
 ---
 
-# 📂 `task_8` — Homework 8: Object Detection in Bathymetric Maps
+## task_8 — Homework 8: Object Detection in Bathymetric Maps
 
 ## 📌 Task Description
 
@@ -374,7 +374,7 @@ The **contour-based method** is more efficient for isoline extraction and shape 
 ---
 
 
-### 📂 `task_9` — Homework 9: Customer Segmentation via Clustering
+## task_9 — Homework 9: Customer Segmentation via Clustering
 
 #### 📘 Description:
 
@@ -424,7 +424,7 @@ This project explores customer segmentation using clustering techniques. The goa
 
 ---
 
-### 📂 `task_10` — Titanic Survival Prediction
+## task_10 — Titanic Survival Prediction
 
 
 #### 📘 Description:
@@ -452,7 +452,7 @@ Feature engineering + tuned NN can outperform traditional models on tabular data
 
 ---
 
-### 📂 `task_11` — Sentiment Analysis, Text Mining & Word Embeddings (RNN + spaCy)
+## task_11 —  Sentiment Analysis, Text Mining and RNN (Spacy)
 
 #### 📘 Description:
 
@@ -509,7 +509,7 @@ A full pipeline combining sentiment analysis using RNN (LSTM) on IMDB reviews, U
 
 ---
 
-### 📂 `task_12` — DEM Accuracy Assessment & ICESat-2 Ground Profile Extraction
+## task_12 — DEM Accuracy Assessment and ICESat-2 Ground Profile Extraction
 
 ---
 
