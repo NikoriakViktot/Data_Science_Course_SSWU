@@ -36,7 +36,7 @@
 - DSS for drought-resilient crops
 - Customer segmentation (KMeans, GMM, PCA)
 - Neural network classifiers (Titanic)
-- SCOR-based CRM simulator for credit risk
+- SCOR-based DSS for evaluating crop-region efficiency
 - GIS pipeline for terrain analysis with ICESat-2 data
 
 
