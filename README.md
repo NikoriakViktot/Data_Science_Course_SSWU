@@ -31,8 +31,6 @@
 - Business forecasting, SCOR-index modeling, CRM credit scoring
 - GIS analysis with GeoPandas, Digital Twins, e-commerce analytics
 
-[🔝 Back to top](#table-of-contents)
-
 
 ## Final projects include:
 - DSS for drought-resilient crops
