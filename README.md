@@ -45,7 +45,7 @@
 🔗 [View Certificate](https://courses.university.sigma.software/certificates/0fdd0805968b4407aad6f8f2255284e5)
 
 ---
-___
+
 
 ### 📂 `task_1` — Homework 1: Trend Modeling with Noise
 
